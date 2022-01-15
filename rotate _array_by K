@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+void rot_array(int a[] ,  int n, int k){
+    int i, b[n];
+    
+   for(i=0;  i<n; i++) {
+       b[(i+k)%n] = a[i];
+   }
+   
+   for(i=0; i<n; i++)
+     cout<<b[i]<<" ";
+    
+}
+
+
+int main()
+{
+   int a[] = { 1, 2, 3, 4, 5 };
+    int n= sizeof(a) / sizeof(a[0]);
+    int k = 2;
+     
+    rot_array(a, n, k);
+    return 0;
+}
